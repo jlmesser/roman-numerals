@@ -34,6 +34,12 @@ class RomanNumeralsTest {
         assertEquals("M", RomanNumerals.convert(1000));
     }
 
+    @Test
+    void convert_intOutOfRange_failure() {
+        assertEquals("unable to represent integer " + -1 + " using roman numerals", RomanNumerals.convert(-1));
+        assertEquals("unable to represent integer " + 4000 + " using roman numerals", RomanNumerals.convert(4000));
+    }
+
 
     //over maximum int error case
     //all Subtractive cases

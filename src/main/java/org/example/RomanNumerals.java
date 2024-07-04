@@ -17,6 +17,12 @@ public class RomanNumerals {
      */
 
     public static String convert(int integer) {
+
+        //todo properly handle error case
+        if (integer > 3999 || integer < 1) {
+            return "unable to represent integer " + integer + " using roman numerals";
+        }
+
         return switch (integer) {
             case 1 -> "I";
             case 2 -> "II";
