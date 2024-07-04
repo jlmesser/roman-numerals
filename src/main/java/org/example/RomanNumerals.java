@@ -29,6 +29,7 @@ public class RomanNumerals {
             case 100 -> "C";
             case 500 -> "D";
             case 1000 -> "M";
+            case 10 -> "X";
             default -> "";
         };
     }
