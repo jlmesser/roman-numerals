@@ -89,12 +89,13 @@ class RomanNumeralsTest {
         assertEquals("CM", RomanNumerals.convert(900));
     }
 
-
-    //test cases for other digit places/units 10x e.g. 1,2..9, 10,20 ... 90
-
-    //2 digit int cases
-    //3 digit int cases
-    //4 digit int cases (including invalid 4000 +)
+    @Test
+    void convert_quadDigitCases_success() {
+        assertEquals("M", RomanNumerals.convert(1000));
+        assertEquals("MM", RomanNumerals.convert(2000));
+        assertEquals("MMM", RomanNumerals.convert(3000));
+        assertEquals("unable to represent integer " + 4000 + " using roman numerals", RomanNumerals.convert(4000));
+    }
 
     //todo find csv dataset of mappings? make it? import as datasource for parameterized test
     //all valid int cases (<4000) from csv

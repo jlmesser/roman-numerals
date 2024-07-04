@@ -39,7 +39,9 @@ public class RomanNumerals {
             case 600 -> "DC";
             case 700 -> "DCC";
             case 800 -> "DCCC";
-            default -> "";
+            case 2000 -> "MM";
+            case 3000 -> "MMM";
+            default -> "not yet handled";
         };
     }
 
