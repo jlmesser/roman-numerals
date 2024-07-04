@@ -40,9 +40,16 @@ class RomanNumeralsTest {
         assertEquals("unable to represent integer " + 4000 + " using roman numerals", RomanNumerals.convert(4000));
     }
 
+    @Test
+    void convert_subtractiveCases_success() {
+        assertEquals("IV", RomanNumerals.convert(4));
+        assertEquals("IX", RomanNumerals.convert(9));
+        assertEquals("XL", RomanNumerals.convert(40));
+        assertEquals("XC", RomanNumerals.convert(90));
+        assertEquals("CD", RomanNumerals.convert(400));
+        assertEquals("CM", RomanNumerals.convert(900));
+    }
 
-    //over maximum int error case
-    //all Subtractive cases
     //all single digit int cases
 
     //test cases for other digit places/units 10x e.g. 1,2..9, 10,20 ... 90
@@ -56,7 +63,7 @@ class RomanNumeralsTest {
 
 
 
-    //Subtractive notation is used for 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).
+
     //A number containing two or more decimal digits is built by appending the Roman numeral equivalent for each, from highest to lowest
     //0 is omitted
     //The largest number that can be represented in this manner is 3,999
