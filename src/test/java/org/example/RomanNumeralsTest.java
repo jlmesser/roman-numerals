@@ -97,6 +97,24 @@ class RomanNumeralsTest {
         assertEquals("unable to represent integer " + 4000 + " using roman numerals", RomanNumerals.convert(4000));
     }
 
+    //misc examples with more complex numbers - i.e. numbers not multiples of 10/100/1000 etc
+
+    @Test
+    void convert_complexNumberCases_success() {
+        assertEquals("XXXIX", RomanNumerals.convert(39));
+        assertEquals("CCXLVI", RomanNumerals.convert(246));
+        assertEquals("DCCLXXXIX", RomanNumerals.convert(789));
+        assertEquals("MMCDXXI", RomanNumerals.convert(2421));
+        //containing zeros
+        assertEquals("CLX", RomanNumerals.convert(160));
+        assertEquals("CCVII", RomanNumerals.convert(207));
+        assertEquals("MIX", RomanNumerals.convert(1009));
+        assertEquals("MLXVI", RomanNumerals.convert(1066));
+    }
+
+
+
+
     //todo find csv dataset of mappings? make it? import as datasource for parameterized test
     //all valid int cases (<4000) from csv
 
@@ -109,6 +127,7 @@ class RomanNumeralsTest {
     //The largest number that can be represented in this manner is 3,999
 
     /*
+    check valid int
     split int into 1s, 10s, 100s etc
     map each split int to a set of 1-3 numerals related to unit
         check for Subtractive cases (starts with 4 or 9)
