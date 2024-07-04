@@ -50,6 +50,24 @@ class RomanNumeralsTest {
         assertEquals("CM", RomanNumerals.convert(900));
     }
 
+    @Test
+    void convert_singleDigitCases_success() {
+        assertEquals("I", RomanNumerals.convert(1));
+        assertEquals("II", RomanNumerals.convert(2));
+        assertEquals("III", RomanNumerals.convert(3));
+        assertEquals("IV", RomanNumerals.convert(4));
+        assertEquals("V", RomanNumerals.convert(5));
+
+        assertEquals("VI", RomanNumerals.convert(6));
+        assertEquals("VII", RomanNumerals.convert(7));
+        assertEquals("VIII", RomanNumerals.convert(8));
+
+        assertEquals("IX", RomanNumerals.convert(9));
+    }
+
+
+
+
     //all single digit int cases
 
     //test cases for other digit places/units 10x e.g. 1,2..9, 10,20 ... 90

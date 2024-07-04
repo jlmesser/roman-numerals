@@ -26,6 +26,9 @@ public class RomanNumerals {
             case 90 -> "XC";
             case 400 -> "CD";
             case 900 -> "CM";
+            case 6 -> "VI";
+            case 7 -> "VII";
+            case 8 -> "VIII";
             default -> "";
         };
     }
