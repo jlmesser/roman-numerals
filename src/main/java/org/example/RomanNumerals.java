@@ -29,6 +29,11 @@ public class RomanNumerals {
             case 6 -> "VI";
             case 7 -> "VII";
             case 8 -> "VIII";
+            case 20 -> "XX";
+            case 30 -> "XXX";
+            case 60 -> "LX";
+            case 70 -> "LXX";
+            case 80 -> "LXXX";
             default -> "";
         };
     }

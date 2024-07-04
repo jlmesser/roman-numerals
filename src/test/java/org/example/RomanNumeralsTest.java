@@ -57,18 +57,25 @@ class RomanNumeralsTest {
         assertEquals("III", RomanNumerals.convert(3));
         assertEquals("IV", RomanNumerals.convert(4));
         assertEquals("V", RomanNumerals.convert(5));
-
         assertEquals("VI", RomanNumerals.convert(6));
         assertEquals("VII", RomanNumerals.convert(7));
         assertEquals("VIII", RomanNumerals.convert(8));
-
         assertEquals("IX", RomanNumerals.convert(9));
     }
 
+    @Test
+    void convert_doubleDigitCases_success() {
+        assertEquals("X", RomanNumerals.convert(10));
+        assertEquals("XX", RomanNumerals.convert(20));
+        assertEquals("XXX", RomanNumerals.convert(30));
+        assertEquals("XL", RomanNumerals.convert(40));
+        assertEquals("L", RomanNumerals.convert(50));
+        assertEquals("LX", RomanNumerals.convert(60));
+        assertEquals("LXX", RomanNumerals.convert(70));
+        assertEquals("LXXX", RomanNumerals.convert(80));
+        assertEquals("XC", RomanNumerals.convert(90));
+    }
 
-
-
-    //all single digit int cases
 
     //test cases for other digit places/units 10x e.g. 1,2..9, 10,20 ... 90
 
@@ -80,6 +87,7 @@ class RomanNumeralsTest {
     //all valid int cases (<4000) from csv
 
 
+    //Subtractive notation is used for 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).
 
 
     //A number containing two or more decimal digits is built by appending the Roman numeral equivalent for each, from highest to lowest
