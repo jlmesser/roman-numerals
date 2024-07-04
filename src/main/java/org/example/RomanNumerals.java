@@ -34,7 +34,13 @@ public class RomanNumerals {
             case 60 -> "LX";
             case 70 -> "LXX";
             case 80 -> "LXXX";
+            case 200 -> "CC";
+            case 300 -> "CCC";
+            case 600 -> "DC";
+            case 700 -> "DCC";
+            case 800 -> "DCCC";
             default -> "";
         };
     }
+
 }

@@ -76,6 +76,19 @@ class RomanNumeralsTest {
         assertEquals("XC", RomanNumerals.convert(90));
     }
 
+    @Test
+    void convert_tripleDigitCases_success() {
+        assertEquals("C", RomanNumerals.convert(100));
+        assertEquals("CC", RomanNumerals.convert(200));
+        assertEquals("CCC", RomanNumerals.convert(300));
+        assertEquals("CD", RomanNumerals.convert(400));
+        assertEquals("D", RomanNumerals.convert(500));
+        assertEquals("DC", RomanNumerals.convert(600));
+        assertEquals("DCC", RomanNumerals.convert(700));
+        assertEquals("DCCC", RomanNumerals.convert(800));
+        assertEquals("CM", RomanNumerals.convert(900));
+    }
+
 
     //test cases for other digit places/units 10x e.g. 1,2..9, 10,20 ... 90
 
